@@ -179,7 +179,7 @@ export default function CourseCatalog() {
                 onClick={() => navigate(`/courses/${course.id}`)}
                 className="cursor-pointer group"
               >
-                <div className="h-full transition-smooth group-hover:-translate-y-1">
+                <div className="h-full transition-all duration-300 ease-in-out group-hover:-translate-y-1">
                   <CourseCard course={course} onClick={() => navigate(`/courses/${course.id}`)} />
                 </div>
               </motion.div>

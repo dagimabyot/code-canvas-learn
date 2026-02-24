@@ -298,16 +298,16 @@
 
   /* Button base styles */
   .btn-primary {
-    @apply bg-gradient-to-r from-primary to-secondary text-primary-foreground font-bold rounded-xl transition-smooth hover:shadow-lg hover:shadow-primary/20 active:scale-95;
+    @apply bg-gradient-to-r from-primary to-secondary text-primary-foreground font-bold rounded-xl transition-all duration-300 ease-in-out hover:shadow-lg hover:shadow-primary/20 active:scale-95;
   }
 
   .btn-secondary {
-    @apply bg-secondary/10 text-secondary font-bold rounded-xl transition-smooth hover:bg-secondary/20 active:scale-95;
+    @apply bg-secondary/10 text-secondary font-bold rounded-xl transition-all duration-300 ease-in-out hover:bg-secondary/20 active:scale-95;
   }
 
   /* Card hover effects */
   .card-hover {
-    @apply transition-smooth hover:shadow-lg hover:scale-105;
+    @apply transition-all duration-300 ease-in-out hover:shadow-lg hover:scale-105;
   }
 
   /* Badge animations */
