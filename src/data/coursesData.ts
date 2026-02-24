@@ -1,125 +1,168 @@
 import { Course } from "../types";
 
-const COURSE_NAMES = [
-  "Programming Basics", "Computational Thinking", "Algorithms Fundamentals", "Data Structures Basics", "Problem Solving with Code",
-  "Introduction to Python", "Python Intermediate", "Python Advanced", "Introduction to Java", "Java Intermediate", "Java Advanced",
-  "Introduction to C", "C Programming Intermediate", "Introduction to C++", "C++ Object-Oriented Programming",
-  "HTML Fundamentals", "HTML Forms & Semantics", "CSS Fundamentals", "CSS Layouts (Flexbox & Grid)", "Responsive Web Design",
-  "CSS Animations", "JavaScript Fundamentals", "JavaScript DOM Manipulation", "JavaScript ES6+", "TypeScript Basics",
-  "Web Accessibility (A11y)", "Web Performance Optimization", "Frontend Project: Personal Website", "React Basics", "React Hooks & State",
-  "React Router", "Next.js Fundamentals", "Web APIs & Fetch", "Frontend Project: E-commerce UI", "Progressive Web Apps (PWA)",
-  "Mobile App Development Basics", "Android Development with Java", "Android Development with Kotlin", "Flutter Basics", "Flutter Intermediate",
-  "React Native Basics", "React Native Advanced", "Mobile UI/UX Design", "Firebase for Mobile Apps", "App Deployment & Publishing",
-  "Mobile App Security", "Offline-First Mobile Apps", "Cross-Platform Development", "Mobile App Testing", "Mobile Project: To-Do App",
-  "Backend Development Fundamentals", "Node.js Basics", "Express.js", "REST API Design", "Authentication & Authorization",
-  "Django Fundamentals", "Django REST Framework", "FastAPI", "SQL Fundamentals", "PostgreSQL", "MongoDB", "Database Design",
-  "API Security", "Backend Testing", "Backend Project: Blog API",
-  "Data Science Fundamentals", "Data Analysis with Python", "NumPy & Pandas", "Data Visualization", "Statistics for Programmers",
-  "Machine Learning Basics", "Supervised Learning", "Unsupervised Learning", "Deep Learning Fundamentals", "Neural Networks",
-  "AI with Python", "Natural Language Processing", "Computer Vision Basics", "AI Ethics", "ML Project: Prediction System",
-  "Cloud Computing Fundamentals", "AWS Basics", "Google Cloud Basics", "Docker Fundamentals", "Kubernetes Basics", "CI/CD Pipelines",
-  "Linux Command Line", "Git & GitHub", "DevOps Fundamentals", "Cybersecurity Basics",
-  "Software Engineering Principles", "Clean Code Practices", "Design Patterns", "System Design Basics", "Agile & Scrum",
-  "Technical Interview Preparation", "Coding Challenges & Algorithms", "Open Source Contribution", "Portfolio Development", "Capstone Project: Full-Stack Application"
+export const coursesData: Course[] = [
+  {
+    id: "python-101",
+    title: "Python for Beginners",
+    description: "Master Python programming from scratch. Learn syntax, variables, loops, and functions with interactive lessons.",
+    category: "Programming",
+    level: "Beginner",
+    duration: "4 weeks",
+    lessons: 48,
+    thumbnail: "https://images.unsplash.com/photo-1526374965328-7f5ae4e8290f?w=500",
+    prerequisites: ["None"],
+    skillsGained: ["Python Syntax", "Variables", "Loops", "Functions"],
+    targetAudience: "Beginners",
+  },
+  {
+    id: "python-201",
+    title: "Python Intermediate",
+    description: "Advance your Python skills with OOP, file handling, and libraries. Build real projects.",
+    category: "Programming",
+    level: "Intermediate",
+    duration: "5 weeks",
+    lessons: 56,
+    thumbnail: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=500",
+    prerequisites: ["Python for Beginners"],
+    skillsGained: ["OOP", "File I/O", "Libraries", "Debugging"],
+    targetAudience: "Intermediate Developers",
+  },
+  {
+    id: "javascript-101",
+    title: "JavaScript Essentials",
+    description: "Learn JavaScript fundamentals for web development. DOM manipulation, events, and ES6+ features.",
+    category: "Web Development",
+    level: "Beginner",
+    duration: "5 weeks",
+    lessons: 56,
+    thumbnail: "https://images.unsplash.com/photo-1633356122544-f134324ef6db?w=500",
+    prerequisites: ["None"],
+    skillsGained: ["JS Syntax", "DOM", "Events", "ES6+"],
+    targetAudience: "Web Developers",
+  },
+  {
+    id: "html-css-101",
+    title: "HTML & CSS Fundamentals",
+    description: "Build beautiful websites with HTML5 and CSS3. Learn responsive design and modern CSS techniques.",
+    category: "Web Development",
+    level: "Beginner",
+    duration: "4 weeks",
+    lessons: 44,
+    thumbnail: "https://images.unsplash.com/photo-1460925895917-aaf4b51bda11?w=500",
+    prerequisites: ["None"],
+    skillsGained: ["HTML5", "CSS3", "Flexbox", "Grid"],
+    targetAudience: "Web Developers",
+  },
+  {
+    id: "react-101",
+    title: "React Fundamentals",
+    description: "Build interactive UIs with React. Components, props, state, and hooks explained with practical examples.",
+    category: "Web Development",
+    level: "Intermediate",
+    duration: "6 weeks",
+    lessons: 60,
+    thumbnail: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=500",
+    prerequisites: ["JavaScript Essentials", "HTML & CSS Fundamentals"],
+    skillsGained: ["Components", "Props", "State", "Hooks"],
+    targetAudience: "Web Developers",
+  },
+  {
+    id: "java-101",
+    title: "Java for Beginners",
+    description: "Start your Java journey. Learn OOP principles, variables, methods, and build console applications.",
+    category: "Programming",
+    level: "Beginner",
+    duration: "6 weeks",
+    lessons: 64,
+    thumbnail: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=500",
+    prerequisites: ["None"],
+    skillsGained: ["Java Syntax", "OOP", "Methods", "Classes"],
+    targetAudience: "Backend Developers",
+  },
+  {
+    id: "java-201",
+    title: "Java Advanced",
+    description: "Master advanced Java concepts: Collections, Exceptions, File I/O, and multi-threading.",
+    category: "Programming",
+    level: "Intermediate",
+    duration: "7 weeks",
+    lessons: 72,
+    thumbnail: "https://images.unsplash.com/photo-1633356122544-f134324ef6db?w=500",
+    prerequisites: ["Java for Beginners"],
+    skillsGained: ["Collections", "Threading", "Exceptions", "Streams"],
+    targetAudience: "Backend Developers",
+  },
+  {
+    id: "cpp-101",
+    title: "C++ Programming",
+    description: "Learn C++ for systems programming. Memory management, pointers, and competitive coding.",
+    category: "Programming",
+    level: "Intermediate",
+    duration: "7 weeks",
+    lessons: 72,
+    thumbnail: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=500",
+    prerequisites: ["Programming fundamentals"],
+    skillsGained: ["C++ Syntax", "Pointers", "Memory", "STL"],
+    targetAudience: "Systems Programmers",
+  },
+  {
+    id: "dsa-101",
+    title: "Data Structures & Algorithms",
+    description: "Master DSA with real coding problems. Arrays, linked lists, trees, sorting, and searching algorithms.",
+    category: "Programming",
+    level: "Intermediate",
+    duration: "8 weeks",
+    lessons: 80,
+    thumbnail: "https://images.unsplash.com/photo-1526374965328-7f5ae4e8290f?w=500",
+    prerequisites: ["Any language basics"],
+    skillsGained: ["DSA", "Problem Solving", "Optimization", "Big O"],
+    targetAudience: "All Developers",
+  },
+  {
+    id: "sql-101",
+    title: "SQL & Databases",
+    description: "Learn SQL, database design, and optimization. Master queries, joins, and relational databases.",
+    category: "Backend",
+    level: "Beginner",
+    duration: "4 weeks",
+    lessons: 40,
+    thumbnail: "https://images.unsplash.com/photo-1460925895917-aaf4b51bda11?w=500",
+    prerequisites: ["None"],
+    skillsGained: ["SQL", "Databases", "Queries", "Optimization"],
+    targetAudience: "Backend Developers",
+  },
+  {
+    id: "node-101",
+    title: "Node.js & Express",
+    description: "Build backend APIs with Node.js and Express. RESTful APIs, middleware, and server-side development.",
+    category: "Backend",
+    level: "Intermediate",
+    duration: "6 weeks",
+    lessons: 60,
+    thumbnail: "https://images.unsplash.com/photo-1633356122544-f134324ef6db?w=500",
+    prerequisites: ["JavaScript Essentials"],
+    skillsGained: ["Node.js", "Express", "APIs", "Routing"],
+    targetAudience: "Full Stack Developers",
+  },
+  {
+    id: "git-101",
+    title: "Git & Version Control",
+    description: "Master Git workflow. Branching, merging, collaboration, and GitHub best practices.",
+    category: "Tools",
+    level: "Beginner",
+    duration: "2 weeks",
+    lessons: 20,
+    thumbnail: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=500",
+    prerequisites: ["None"],
+    skillsGained: ["Git", "GitHub", "Branching", "Collaboration"],
+    targetAudience: "All Developers",
+  },
 ];
 
-const getCategoryForIndex = (index: number): string => {
-  if (index < 15) return "Programming Fundamentals";
-  if (index < 35) return "Web Development";
-  if (index < 50) return "Mobile App Development";
-  if (index < 65) return "Backend & Databases";
-  if (index < 80) return "Data, AI & Machine Learning";
-  if (index < 90) return "Cloud, DevOps & Security";
-  return "Career, Projects & Advanced Topics";
-};
-
 export const getDetailedCourses = (): Course[] => {
-  const pythonForBeginners: Course = {
-    id: "intro-python",
-    title: "Introduction to Python",
-    description: "Start your journey with Python, the most popular language for AI and Data Science.",
-    category: "Programming Fundamentals",
-    level: "Beginner",
-    duration: "4h",
-    thumbnail: "https://storage.googleapis.com/dala-prod-public-storage/generated-images/359c0c12-570b-4c1e-b118-77e2ee7c81d8/python-for-beginners-banner-7dcd7008-1771929005335.webp",
-    prerequisites: ["None"],
-    skillsGained: ["Python Syntax", "Variables", "Loops", "Conditionals"],
-    targetAudience: "Beginners",
-    modules: [
-      {
-        id: "py-m1",
-        title: "The Basics",
-        description: "Get familiar with Python syntax",
-        lessons: [
-          {
-            id: "py-l1",
-            title: "Hello Python",
-            type: "explanation",
-            xp: 20,
-            content: {
-              explanation: "Python is a high-level, interpreted programming language known for its readability. To print text, use the print() function.",
-              codeMain: "print('Hello, CodeMaster!')",
-            }
-          },
-          {
-             id: "py-l2",
-             title: "Variables",
-             type: "practice",
-             xp: 30,
-             content: {
-               explanation: "Variables are used to store data. In Python, you don't need to declare types.",
-               codeMain: "name = 'Solo'\
-print(name)",
-               practiceInstructions: "Change the value of name to your name and print it."
-             }
-          }
-        ]
-      }
-    ]
-  };
-
-  const allCourses: Course[] = [pythonForBeginners];
-
-  COURSE_NAMES.forEach((name, index) => {
-    if (name === "Introduction to Python") return;
-
-    const category = getCategoryForIndex(index);
-    allCourses.push({
-      id: `course-${index}`,
-      title: name,
-      description: `Comprehensive course on ${name} designed for practical learning. Mastery of ${category} starts here.`,
-      category: category,
-      level: index % 5 === 0 ? "Advanced" : (index % 3 === 0 ? "Intermediate" : "Beginner"),
-      duration: `${3 + (index % 10)}h`,
-      thumbnail: `https://picsum.photos/seed/${index}/800/450`,
-      prerequisites: ["Basic Logic"],
-      skillsGained: [name, "Problem Solving"],
-      targetAudience: "Aspiring Developers",
-      modules: [
-        {
-          id: `m-${index}-1`,
-          title: "Introduction",
-          description: "Foundation and Setup",
-          lessons: [
-            {
-              id: `l-${index}-1`,
-              title: "Overview",
-              type: "explanation",
-              xp: 15,
-              content: {
-                explanation: `Welcome to the ${name} course. We will explore the core concepts and best practices.`,
-                codeMain: "// Learning path initialized"
-              }
-            }
-          ]
-        }
-      ]
-    });
-  });
-
-  return allCourses;
+  return coursesData;
 };
 
 export const generateCourses = (count: number): Course[] => {
-  return getDetailedCourses().slice(0, count);
+  return coursesData.slice(0, count);
 };

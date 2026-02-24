@@ -9,6 +9,7 @@ import AdminLogin from './pages/AdminLogin';
 import Signup from './pages/Signup';
 import ProfilePage from './pages/ProfilePage';
 import CourseView from './pages/CourseView';
+import CourseCatalog from './pages/CourseCatalog';
 import AdminDashboard from './pages/AdminDashboard';
 import Leaderboard from './pages/Leaderboard';
 import { Toaster } from 'sonner';
@@ -55,6 +56,7 @@ const App: React.FC = () => {
           <Route path="/signup" element={<Signup />} />
           <Route path="/admin/login" element={<AdminLogin />} />
           <Route path="/profile" element={<ProtectedRoute><ProfilePage /></ProtectedRoute>} />
+          <Route path="/courses" element={<CourseCatalog />} />
           <Route path="/courses/:courseId" element={<CourseView />} />
           <Route path="/leaderboard" element={<Leaderboard />} />
           <Route path="/admin" element={<ProtectedRoute adminOnly><AdminDashboard /></ProtectedRoute>} />
