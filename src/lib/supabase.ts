@@ -1,6 +1,30 @@
-import { createClient } from '@supabase/supabase-js';
-
-const supabaseUrl = 'https://loirmuynikvzpehmdqbt.supabase.co';
-const supabaseAnonKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxvaXJtdXluaWt2enBlaG1kcWJ0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzE5MjM0NTAsImV4cCI6MjA4NzQ5OTQ1MH0.esZwx9jxBtZZaZ8M36V3MBrf6_cK9ncz7kToP2gBKVA';
-
-export const supabase = createClient(supabaseUrl, supabaseAnonKey);
+// Mock Supabase client for local development
+// For production, replace this with actual Supabase integration
+export const supabase = {
+  auth: {
+    signUp: async (credentials: any) => {
+      console.log('Mock signup:', credentials);
+      return { data: { user: credentials }, error: null };
+    },
+    signIn: async (credentials: any) => {
+      console.log('Mock signin:', credentials);
+      return { data: { user: credentials }, error: null };
+    },
+    signOut: async () => {
+      console.log('Mock signout');
+      return { error: null };
+    },
+    getSession: async () => {
+      return { data: { session: null }, error: null };
+    },
+    onAuthStateChange: (callback: any) => {
+      return { data: { subscription: null }, unsubscribe: () => {} };
+    },
+  },
+  from: (table: string) => ({
+    select: () => ({ data: [], error: null }),
+    insert: (data: any) => ({ data, error: null }),
+    update: (data: any) => ({ data, error: null }),
+    delete: () => ({ data: null, error: null }),
+  }),
+};
